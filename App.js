@@ -4,12 +4,11 @@ import { useEffect } from 'react';
 // import { Buffer } from 'buffer';
 // window.Pusher = Pusher;
 
-
 try {
-  let id = '1590'
+  let id = '4333'
   console.log(id)
-  const pusher = new Pusher('bff5058d89d1b8f2490b', {
-    cluster: 'mt1',
+  const pusher = new Pusher('API_KEY', {
+    cluster: 'CLUSTER',
   });
 
   const channel = pusher.subscribe('chat-channel');
@@ -23,7 +22,7 @@ try {
 export default function App() {
   useEffect(() => {
     Pusher.log = (msg) => {
-      console.log("Annay wa log: " + msg);
+      console.log("Continous log: " + msg);
     };
   },[])  
 
